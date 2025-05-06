@@ -1,0 +1,50 @@
+.logoHeader{
+    height: 350px;
+    width: 80%;
+
+
+    
+}
+
+a{
+    text-decoration: none;    
+}
+
+ul {
+    list-style-type: none;
+    text-align: right; 
+}
+
+li {
+    display: inline-block;    
+    margin: 0 10px;
+}
+
+.titulo{
+    text-align: center;
+    font-size: 4.3rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style:italic
+}
+
+.imgProd{
+    width: 150px;
+    height: 150px;
+}
+
+.btnComprar:active {
+  
+    background-color: beige;
+    border: 1px solid #000;
+    width: 5rem;
+    font-weight: 400;
+    background-color: #919ca8; /* Cambia el color de fondo al presionar */
+    transform: scale(0.90); /* Reduce el tamaño del botón */
+
+  }
+  
+  .in_comentarios{
+    width: 300px;
+    height: 150px;
+    
+  }
