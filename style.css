@@ -1,50 +1,80 @@
-.logoHeader{
-    height: 350px;
-    width: 80%;
-
-
-    
+.logoHeader {
+  height: 350px;
+  width: 80%;
+  display: block;
+  margin: 0 auto;
 }
 
-a{
-    text-decoration: none;    
+.oscurecerFondo {
+  background-image: url(./img/logotoys.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #1110105e;
+}
+
+a {
+  text-decoration: none;
 }
 
 ul {
-    list-style-type: none;
-    text-align: right; 
+  /* list-style-type: none;*/
+  text-align: right;
+  display: flex;
+  gap: 1rem;
 }
 
 li {
-    display: inline-block;    
-    margin: 0 10px;
+  display: inline-block;
+  /*margin: 0 10px;*/
 }
 
-.titulo{
-    text-align: center;
-    font-size: 4.3rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-style:italic
+.titulo {
+  text-align: center;
+  font-size: 4.3rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-style: italic;
 }
 
-.imgProd{
-    width: 150px;
-    height: 150px;
+.imgProd {
+  width: 150px;
+  height: 150px;
 }
 
 .btnComprar:active {
-  
-    background-color: beige;
-    border: 1px solid #000;
-    width: 5rem;
-    font-weight: 400;
-    background-color: #919ca8; /* Cambia el color de fondo al presionar */
-    transform: scale(0.90); /* Reduce el tamaño del botón */
+  background-color: beige;
+  border: 1px solid #000;
+  width: 5rem;
+  font-weight: 400;
+  background-color: #919ca8;
+  transform: scale(0.9);
+}
 
-  }
-  
-  .in_comentarios{
-    width: 300px;
-    height: 150px;
-    
-  }
+.in_comentarios {
+  width: 300px;
+  height: 150px;
+}
+
+.seccionProd {
+  flex: 1 1 30%;
+  box-sizing: border-box;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.seccionProd button {
+  border: none;
+  background-color: #9d2ce9;
+  padding: 0.5rem 1rem;
+  color: #fff;
+}
+
+.containerFlex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
