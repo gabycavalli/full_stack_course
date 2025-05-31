@@ -1,71 +1,295 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="../style.css">
-</head>
-
-<header>
-    <nav>
-        <ul>
-          <li><a href="/index.html">Inicio</a></li>
-          <li><a href="../pages/productos.html">Productos</a></li>
-          <li><a href="../pages/costosEnv.html">Costos de envio</a></l>
-          <li><a href="../pages/comoComprar.html">Como comprar</a></li>
-          <li><a href="../pages/contacto.html">Contacto</a></li>      
-	      </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Productos | Bolu-toys</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <!-- Navbar Bootstrap -->
+    <nav class="navbar navbar-expand-* navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/index.html">
+          <img src="../img/logoComic.png" alt="Logo" width="40" height="40" />
+          Bolu-toys
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/productos.html">Productos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/costosEnv.html"
+                >Costos de envío</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/comoComprar.html"
+                >Cómo comprar</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/contacto.html">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
-    <nav>
-      <img class="logoHeader" src="../img/comicHeader.jpg" alt="logo">
-    </nav>
-</header>
 
-  <main>
-    <h2 class="titulo" >Productos</h2>
-    <div class="containerFlex">
-    <section class="seccionProd">
-      <img class="imgProd" src="../img/yoda.jpg" alt="munieco de yoda"><br><br>      
-      <h3 class="descTitulo">Maestro Yoda </h3>
-      <p class="descripcion">Yoda es un personaje ficticio del universo de Star Wars, era uno de los más renombrados y poderosos maestros Jedi durante toda la historia de la Galaxia, y uno de los pocos Jedis de la República Galáctica en sobrevivir hasta la Guerra Civil Galáctica.</p>
-      <label for="precio">Precio:</label> <span id="precio">$19.999</span><br><br>
-      <a href="../pages/comoComprar.html">
-        <button class="btnComprar">Comprar</button>
-        <button class="carrito">Agregar al Carrito</button>
-      </a>
-    </section>
-    <hr>
-    
-    <section class="seccionProd">
-      <img class="imgProd" src="../img/lukeskywalker.jpg" alt="munieco de luke"><br><br>
-      <h3 class="descTitulo">Luke Skywalker</h3>
-      <p class="descripcion">Luke Skywalker es un personaje ficticio y el protagonista​ de la trilogía original de la saga de ciencia ficción Star Wars.​ Interpretado por Mark Hamill, Luke apareció por primera vez en Star Wars, y regresó en El imperio contraataca y El regreso del Jedi</p>
-      <label for="precio">Precio:</label> <span id="precio">$19.999</span><br><br>
-      <a href="../pages/comoComprar.html">
-        <button class="btnComprar">Comprar</button>
-        <button class="carrito">Agregar al Carrito</button>
-      </a>     
-    </section>
-    <hr>
-
-   <section class="seccionProd">
-      <img class="imgProd" src="../img/leia.jpg" alt="munieco de leia"><br>
-      <h3 class="descTitulo">Leia Organa </h3>
-      <p class="descripcion">La Princesa Leia Organa, personaje icónico de Star Wars, ha sido representada en diversas figuras de acción y coleccionables a lo largo de los años. Estas figuras, disponibles en diferentes escalas y líneas, ofrecen a los fans la oportunidad de recrear momentos clave de la saga o exhibir sus figuras favoritas en sus coleccione</p>
-      <label for="precio">Precio:</label> <span id="precio">$19.999</span><br><br>
-      <a href="../pages/comoComprar.html">
-        <button class="btnComprar">Comprar</button>
-        <button class="carrito">Agregar al Carrito</button>
-      </a>
-    </section>
+    <!-- Carousel Bootstrap -->
+    <div id="mainCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="../img/comicHeader.jpg"
+            class="d-block w-100"
+            alt="Comic Header"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="../img/headerComic.png"
+            class="d-block w-100"
+            alt="Header Comic"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="../img/logotoys.jpeg"
+            class="d-block w-100"
+            alt="Logo Toys"
+          />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#mainCarousel"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#mainCarousel"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon"></span>
+      </button>
     </div>
-  </main>
 
-<body>
-   
-</body>
+    <main>
+      <h2 class="titulo text-center my-4">Productos</h2>
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-4 d-flex">
+            <div class="card seccionProd h-100">
+              <img
+                src="../img/yoda.jpg"
+                class="card-img-top imgProd"
+                alt="Yoda"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Maestro Yoda</h5>
+                <p class="card-text">
+                  Yoda es un personaje ficticio del universo de Star Wars, era
+                  uno de los más renombrados y poderosos maestros Jedi durante
+                  toda la historia de la Galaxia, y uno de los pocos Jedis de la
+                  República Galáctica en sobrevivir hasta la Guerra Civil
+                  Galáctica.
+                </p>
+                <span class="badge bg-success mb-2">$19.999</span>
+                <div>
+                  <a
+                    href="../pages/comoComprar.html"
+                    class="btn btn-primary btnComprar"
+                    >Comprar</a
+                  >
+                  <button class="btn btn-outline-secondary carrito">
+                    Agregar al Carrito
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Repite para los otros productos -->
+          <div class="col-md-4 d-flex">
+            <div class="card seccionProd h-100">
+              <img
+                src="../img/lukeskywalker.jpg"
+                class="card-img-top imgProd"
+                alt="Luke Skywalker"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Luke Skywalker</h5>
+                <p class="card-text">
+                  Luke Skywalker es un personaje ficticio y el protagonista​ de
+                  la trilogía original de la saga de ciencia ficción Star Wars.​
+                  Interpretado por Mark Hamill, Luke apareció por primera vez en
+                  Star Wars, y regresó en El imperio contraataca y El regreso
+                  del Jedi
+                </p>
+                <span class="badge bg-success mb-2">$19.999</span>
+                <div>
+                  <a
+                    href="../pages/comoComprar.html"
+                    class="btn btn-primary btnComprar"
+                    >Comprar</a
+                  >
+                  <button class="btn btn-outline-secondary carrito">
+                    Agregar al Carrito
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
 
+          <div class="col-md-4 d-flex">
+            <div class="card seccionProd h-100">
+              <img
+                src="../img/leia.jpg"
+                class="card-img-top imgProd"
+                alt="Leia Organa"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Leia Organa</h5>
+                <p class="card-text">
+                  La Princesa Leia Organa, personaje icónico de Star Wars, ha
+                  sido representada en diversas figuras de acción y
+                  coleccionables a lo largo de los años. Estas figuras,
+                  disponibles en diferentes escalas y líneas, ofrecen a los fans
+                  la oportunidad de recrear momentos clave de la saga o exhibir
+                  sus figuras favoritas en sus coleccione
+                </p>
+                <span class="badge bg-success mb-2">$19.999</span>
+                <div>
+                  <a
+                    href="../pages/comoComprar.html"
+                    class="btn btn-primary btnComprar"
+                    >Comprar</a
+                  >
+                  <button class="btn btn-outline-secondary carrito">
+                    Agregar al Carrito
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 d-flex">
+            <div class="card seccionProd h-100">
+              <img
+                src="../img/leia.jpg"
+                class="card-img-top imgProd"
+                alt="Leia Organa"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Leia Organa</h5>
+                <p class="card-text">
+                  La Princesa Leia Organa, personaje icónico de Star Wars, ha
+                  sido representada en diversas figuras de acción y
+                  coleccionables a lo largo de los años. Estas figuras,
+                  disponibles en diferentes escalas y líneas, ofrecen a los fans
+                  la oportunidad de recrear momentos clave de la saga o exhibir
+                  sus figuras favoritas en sus coleccione
+                </p>
+                <span class="badge bg-success mb-2">$19.999</span>
+                <div>
+                  <a
+                    href="../pages/comoComprar.html"
+                    class="btn btn-primary btnComprar"
+                    >Comprar</a
+                  >
+                  <button class="btn btn-outline-secondary carrito">
+                    Agregar al Carrito
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex">
+            <div class="card seccionProd h-100">
+              <img
+                src="../img/leia.jpg"
+                class="card-img-top imgProd"
+                alt="Leia Organa"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Leia Organa</h5>
+                <p class="card-text">
+                  La Princesa Leia Organa, personaje icónico de Star Wars, ha
+                  sido representada en diversas figuras de acción y
+                  coleccionables a lo largo de los años. Estas figuras,
+                  disponibles en diferentes escalas y líneas, ofrecen a los fans
+                  la oportunidad de recrear momentos clave de la saga o exhibir
+                  sus figuras favoritas en sus coleccione
+                </p>
+                <span class="badge bg-success mb-2">$19.999</span>
+                <div>
+                  <a
+                    href="../pages/comoComprar.html"
+                    class="btn btn-primary btnComprar"
+                    >Comprar</a
+                  >
+                  <button class="btn btn-outline-secondary carrito">
+                    Agregar al Carrito
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex">
+            <div class="card seccionProd h-100">
+              <img
+                src="../img/leia.jpg"
+                class="card-img-top imgProd"
+                alt="Leia Organa"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Leia Organa</h5>
+                <p class="card-text">
+                  La Princesa Leia Organa, personaje icónico de Star Wars, ha
+                  sido representada en diversas figuras de acción y
+                  coleccionables a lo largo de los años. Estas figuras,
+                  disponibles en diferentes escalas y líneas, ofrecen a los fans
+                  la oportunidad de recrear momentos clave de la saga o exhibir
+                  sus figuras favoritas en sus coleccione
+                </p>
+                <span class="badge bg-success mb-2">$19.999</span>
+                <div>
+                  <a
+                    href="../pages/comoComprar.html"
+                    class="btn btn-primary btnComprar"
+                    >Comprar</a
+                  >
+                  <button class="btn btn-outline-secondary carrito">
+                    Agregar al Carrito
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
-
-

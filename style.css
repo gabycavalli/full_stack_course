@@ -1,80 +1,295 @@
-.logoHeader {
-  height: 350px;
-  width: 80%;
+/* Estilos generales (aplicados a todos los dispositivos) */
+body {
+  font-family: sans-serif; /* Una fuente genérica para empezar */
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4; /* Un color de fondo suave */
+  color: #333; /* Color de texto principal */
+  font-size: 16px; /* Tamaño de fuente base para mobile */
+}
+
+header {
+  position: relative;
+  background-color: #fff; /* Un fondo para el header */
+  padding: 10px 0; /* Espaciado vertical en el header */
+}
+
+.carousel-inner img {
+  height: 320px; /* Ajusta la altura a tu preferencia */
+  object-fit: cover; /* Recorta la imagen para llenar el espacio */
+  width: 100%; /* Ocupa todo el ancho del carousel */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center; /* Centrar el menú en mobile por defecto */
+}
+
+nav li {
+  display: block; /* Apilar los elementos del menú en mobile */
+  margin-bottom: 10px;
+}
+
+nav a {
   display: block;
-  margin: 0 auto;
-}
-
-.oscurecerFondo {
-  background-image: url(./img/logotoys.jpeg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: #1110105e;
-}
-
-a {
+  padding: 10px 15px;
   text-decoration: none;
+  color: #333;
+  font-weight: bold;
 }
 
-ul {
-  /* list-style-type: none;*/
-  text-align: right;
-  display: flex;
-  gap: 1rem;
-}
-
-li {
-  display: inline-block;
-  /*margin: 0 10px;*/
+.imgHeader {
+  width: 100%;
+  display: block;
+  height: auto; /* Ajustar la altura proporcionalmente */
 }
 
 .titulo {
   text-align: center;
-  font-size: 4.3rem;
+  font-size: 2.5rem; /* Un tamaño más pequeño para mobile */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-style: italic;
-}
-
-.imgProd {
-  width: 150px;
-  height: 150px;
-}
-
-.btnComprar:active {
-  background-color: beige;
-  border: 1px solid #000;
-  width: 5rem;
-  font-weight: 400;
-  background-color: #919ca8;
-  transform: scale(0.9);
-}
-
-.in_comentarios {
-  width: 300px;
-  height: 150px;
-}
-
-.seccionProd {
-  flex: 1 1 30%;
-  box-sizing: border-box;
-  padding: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background-color: #f9f9f9;
-}
-
-.seccionProd button {
-  border: none;
-  background-color: #9d2ce9;
-  padding: 0.5rem 1rem;
-  color: #fff;
+  margin-top: 20px;
 }
 
 .containerFlex {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+  flex-direction: column; /* Alinear verticalmente en mobile */
   gap: 1rem;
+  padding: 15px;
+}
+
+.seccionProd {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 1rem;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s, box-shadow 0.3s;
+  height: 100%; /* Permite a Bootstrap manejar la altura uniformemente */
+}
+
+.seccionProd:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.imgProd {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: contain;
+  margin: 0 auto 10px;
+}
+
+.card-text {
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.carrito {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  background-color: #9d2ce9;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.carrito:active {
+  background-color: #7b1fa2;
+  transform: scale(0.95);
+}
+
+.btnComprar {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  background-color: #9d2ce9;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.btnComprar:active {
+  background-color: #7b1fa2;
+  transform: scale(0.95);
+}
+
+.in_comentarios {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Estilos para Tablet (ancho mínimo de 600px) */
+@media (min-width: 600px) {
+  body {
+    font-size: 17px; /* Un poco más grande que mobile */
+    padding: 30px;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: center; /* Centrar el menú en tablet */
+    align-items: center;
+    gap: 20px;
+  }
+
+  nav li {
+    display: inline-block;
+    margin-bottom: 0;
+  }
+
+  .titulo {
+    font-size: 3.5rem; /* Un tamaño adecuado para tablet */
+  }
+
+  .containerFlex {
+    flex-direction: row; /* Volver a la disposición horizontal en tablet */
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
+    justify-content: space-around; /* Distribuir los elementos */
+  }
+
+  .seccionProd {
+    width: calc(100% - 1rem); /* Dos columnas en tablet */
+  }
+
+  .imgHeader {
+    height: 400px; /* Ajustar la altura del header para tablet */
+  }
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-body > div {
+  margin-top: auto; /* Empuja los botones al fondo */
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Estilos para Desktop (ancho mínimo de 992px) */
+@media (min-width: 992px) {
+  body {
+    font-size: 18px; /* Tamaño de fuente para desktop */
+    padding: 40px;
+    width: calc(100%);
+  }
+
+  nav ul {
+    justify-content: flex-end; /* Alinear el menú a la derecha en desktop */
+    gap: 30px;
+  }
+
+  .titulo {
+    font-size: 4.3rem; /* El tamaño original para desktop */
+  }
+
+  .containerFlex {
+    flex-wrap: nowrap; /* Evitar el envoltorio en desktop si se desea una fila */
+    justify-content: space-between; /* Espaciar los elementos */
+  }
+
+  .seccionProd {
+    width: calc(100% - 1rem); /* Tres columnas en desktop */
+  }
+
+  .imgHeader {
+    height: 700px; /* La altura original del header para desktop */
+  }
+}
+
+/* Estilos específicos para el menú superpuesto (puedes combinarlos con las media queries) */
+header {
+  position: relative;
+}
+
+nav:first-child ul {
+  /* Apuntamos al primer nav que contiene la lista */
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 1rem;
+  border-radius: 5px;
+  display: flex; /* Para alinear los items horizontalmente en desktop */
+  flex-direction: column;
+  gap: 1rem;
+}
+
+nav:first-child li {
+  display: inline-block;
+  margin-bottom: 0; /* Resetear el margen inferior */
+}
+
+nav:first-child a {
+  color: #333;
+}
+
+nav:last-child {
+  /* Ocultar el segundo nav con la imagen en la mayoría de los casos */
+  display: block; /* Mostrarlo para que la imagen ocupe el header */
+}
+
+/* Ajustes para el header y el menú en diferentes tamaños */
+@media (max-width: 599px) {
+  /* Mobile */
+  nav:first-child ul {
+    position: static; /* Volver al flujo normal para mobile */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: transparent; /* Sin fondo para mobile */
+    padding: 10px 0;
+  }
+
+  nav:first-child li {
+    margin-bottom: 10px;
+  }
+
+  nav:last-child img {
+    height: auto; /* Ajustar altura proporcionalmente */
+    max-height: 300px; /* Limitar la altura máxima en mobile */
+  }
+}
+
+@media (min-width: 600px) and (max-width: 991px) {
+  /* Tablet */
+  nav:first-child ul {
+    top: 15px;
+    right: 15px;
+  }
+
+  nav:last-child img {
+    height: auto;
+    max-height: 500px;
+  }
+}
+
+@media (min-width: 992px) {
+  /* Desktop */
+  nav:first-child ul {
+    top: 20px;
+    right: 20px;
+  }
+
+  nav:last-child img {
+    height: 700px;
+  }
 }
