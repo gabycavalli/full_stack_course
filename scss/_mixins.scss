@@ -1,0 +1,12 @@
+@use 'variables';
+
+@mixin card-shadow {
+  box-shadow: variables.$shadow;
+  border-radius: variables.$radius;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
